@@ -1,0 +1,43 @@
+{
+  "name": "ps-instant-apps-components",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run setupAssets && vite",
+    "build": "npm run setupAssets && vite build",
+    "preview": "npm run setupAssets && vite preview",
+    "setupAssets": "npm run mkdirT9nAssets && npm run copy",
+    "mkdirT9nAssets": "mkdirp public/assets && mkdirp public/assets/t9n",
+    "copy": "npm run copyCCAssets && npm run copyIACAssets && npm run copyMCAssets",
+    "copyCCAssets": "ncp ./node_modules/@esri/calcite-components/dist/calcite/assets public/assets",
+    "copyIACAssets": "ncp ./node_modules/@esri/instant-apps-components/dist/assets public/assets",
+    "copyMCAssets": "ncp ./node_modules/@arcgis/map-components/dist/arcgis-map-components/assets public/assets",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@arcgis/core": "^4.31.6",
+    "@arcgis/map-components": "^4.31.6",
+    "@esri/calcite-components": "^2.13.2",
+    "@esri/instant-apps-components": "^1.0.0-beta.303",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^9.15.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "globals": "^15.12.0",
+    "mkdirp": "^3.0.1",
+    "ncp": "^2.0.0",
+    "sass": "^1.82.0",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.15.0",
+    "vite": "^6.0.1",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}
