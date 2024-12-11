@@ -7,3 +7,8 @@ React19 web map application that demonstrates how to use Instant Apps Components
 When: Wednesday, December 10 | 9:00 PM - 10:00 AM PT
 
 Speakers: Kelly Hutchins & Ryan Libed
+
+## Steps to run locally:
+
+1. `yarn install`
+2. `npm run dev`
